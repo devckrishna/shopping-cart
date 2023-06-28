@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Rubik", sans-serif;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Pagination*/
+.pagination {
+  @apply flex justify-center items-center;
+}
+
+.pagination li {
+  @apply hidden;
+}
+
+.pagination .previous {
+  @apply flex items-center border-r-[1px] border-darkGray h-[16px] pr-[15px];
+}
+
+.pagination .next {
+  @apply block ml-[15px];
+}
+
+.pagination .disabled {
+  @apply text-gray;
+}
+
+/*Fonts*/
+.title {
+  @apply text-[28px] font-bold
+}
+.largeBoldText {
+  @apply text-[24px] font-semibold
+}
+
+/*Table*/
+.td {
+  @apply flex h-[100px] justify-center items-start
+}
+
+tbody:before {
+  content: "-";
+  display: block;
+  line-height: 2em;
+  color: transparent;
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 2em;
+}
+
+/*Transition*/
+.transitionProp {
+  @apply transition ease-in-out duration-[250ms]
+}
+
+/*Border*/
+.borderBottom {
+  @apply pb-[25px] border-b-[1px] border-gray
+}
+
+/*Select*/
+
+/*Product List*/
+.productList {
+  @apply flex-wrap mobile:flex-row mobile:justify-around tablet:mb-[50px]
+}
+
+.productItemTablet {
+  @apply mobile:flex-1 mobile:mr-[25px]
+}
